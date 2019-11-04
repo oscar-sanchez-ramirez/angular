@@ -12,7 +12,11 @@ import { CaruselComponent } from './carusel/carusel.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 
 const routes: Routes = [
-  { path: 'quienes', component: QuienesSomosComponent }
+  { path: 'carusel', component: CaruselComponent },
+  { path: 'quienes', component: QuienesSomosComponent },
+  { path: '',component: CaruselComponent, pathMatch: 'full' },
+  { path: '**', redirectTo: '/', pathMatch: 'full' },
+
 ];
 
 @NgModule({
