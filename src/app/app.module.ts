@@ -12,12 +12,16 @@ import { CaruselComponent } from './carusel/carusel.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { FooterComponent } from './footer/footer.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
+import { UbicacionComponent } from './ubicacion/ubicacion.component';
 
 const routes: Routes = [
   { path: 'carusel', component: CaruselComponent },
   { path: 'quienes', component: QuienesSomosComponent },
+  { path: 'ubicacion', component: UbicacionComponent },
   { path: '',component: CaruselComponent, pathMatch: 'full' },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
+
+
 
 
 
@@ -30,7 +34,8 @@ const routes: Routes = [
     CaruselComponent,
     QuienesSomosComponent,
     FooterComponent,
-  
+    UbicacionComponent,
+
 
   ],
   imports: [
