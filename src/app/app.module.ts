@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppRoutingModule} from './app-routing.module';
+import { NgxSpinnerModule } from "ngx-spinner";
+
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
@@ -13,11 +15,15 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { FooterComponent } from './footer/footer.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
+import { ContactoComponent } from './contacto/contacto.component';
+
+
 
 const routes: Routes = [
   { path: 'carusel', component: CaruselComponent },
   { path: 'quienes', component: QuienesSomosComponent },
   { path: 'ubicacion', component: UbicacionComponent },
+  { path: 'contacto', component: ContactoComponent },
   { path: '',component: CaruselComponent, pathMatch: 'full' },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 
@@ -35,6 +41,7 @@ const routes: Routes = [
     QuienesSomosComponent,
     FooterComponent,
     UbicacionComponent,
+    ContactoComponent,
 
 
   ],
@@ -44,6 +51,7 @@ const routes: Routes = [
     AppRoutingModule,
     CarouselModule.forRoot(),
     RatingModule.forRoot(),
+    NgxSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
